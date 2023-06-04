@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JAVASCRIPT TASK 1</title>
+    </head>
+    <body>
+        <input type="button" value="Show date" onclick="disp_date()"/>
+        <div id="d1"></div>
+        <br><br>
+        <input type="button" value="Show time" onclick="disp_time();"/>
+        <div id="t1"></div>
+
+        <script type="text/javascript">
+            function disp_date()
+            {
+                var x= new Date();
+                var year=x.getFullYear();
+                var month=x.getMonth();
+                var dt=x.getDate();
+
+                const m=["January", "febrauary", "march", "April",
+            "May", "June", "July", "August", "September", "October",
+        "November", "December"];
+
+                var output=dt+'/'+m[month] +'/'+year;
+                document.getElementById("d1").innerHTML=output;
+            }
+            function disp_time()
+            {
+                const y=new Date();
+                document.getElementById("t1").innerHTML=y;
+            }
+        </script>
+    </body>
+</html>
